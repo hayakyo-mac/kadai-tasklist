@@ -3,7 +3,7 @@ class MessagesController < ApplicationController
 
   
   def index
-      @messages = Message.all
+      @messages = Message.all(params[:page])
   end
 
   def show
@@ -53,6 +53,6 @@ class MessagesController < ApplicationController
   end
 
   def message_params
-    params.require(:message).permit(:content, :title)
+    params.require(:message).permit(:content, :title, :period)
   end
 end
