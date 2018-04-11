@@ -1,6 +1,7 @@
 <h1>id: <%= @message.id %> のタスク詳細ページ</h1>
 
-<p><b><big><%= @message.content %></big></b></p>
+<p><b><big>タイトル: <%= @message.title %></big></b></p>
+<p>内容: <%= @message.content %></p>
 
 
 <%= link_to '一覧に戻る', messages_path %>
